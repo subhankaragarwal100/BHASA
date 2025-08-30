@@ -25,7 +25,7 @@ export async function signup(req, res) {
         //check Email id already exists or not
         const existingEmail = await User.findOne({ email });
         if (existingEmail) {
-            return res.status(400).json({ message: "Email already exists , please use a different email" });
+            return res.status(400).json({ message: "Email already exists, please use a different email" });
         }
 
         const idx = Math.floor(Math.random() * 100) + 1; //generate a random number between 1 and 100
